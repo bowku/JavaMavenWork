@@ -21,7 +21,7 @@ public class TestConnection {
 
 		LOGGER.info("Attempting DB connection...");
 		try {
-			System.out.println("Attemtping DB connection...");
+			System.out.println("Attempting DB connection...");
 			conn = DriverManager.getConnection(connectionURL, username, password);
 			System.out.println("Connected to Database");
 		} catch (SQLException se) {
@@ -29,15 +29,13 @@ public class TestConnection {
 		} finally {
 			try {
 				if (conn != null) {
-					System.out.println("Attempting to close connection...");
+
 					conn.close();
-					System.out.println("Connection Closed.");
 				}
 			} catch (SQLException e) {
 				LOGGER.error(e);
 			}
 		}
-		LOGGER.info("Connected Succesfully!");
 
 	}
 
